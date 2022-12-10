@@ -4,9 +4,7 @@ import {
   faGithub,
   faFacebookF,
   faLinkedinIn,
-  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -35,7 +33,8 @@ const Footer = () => {
       </div>
       <div>
         <p>
-          Developed by <a href="">Nahid Ibn Ali</a>
+          Developed by{" "}
+          <a href="https://www.facebook.com/NahidIbnAli">Nahid Ibn Ali</a>
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>

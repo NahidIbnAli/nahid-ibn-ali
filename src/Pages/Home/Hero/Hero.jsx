@@ -5,7 +5,7 @@ import { DocumentArrowDownIcon } from "@heroicons/react/24/solid";
 const Hero = () => {
   return (
     <div className="hero min-h-screen bg-base-100 px-2">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content flex-col lg:flex-row-reverse lg:gap-20">
         <img src={image} className="max-w-sm" alt="" />
         <div className="lg:w-1/2">
           <h1 className="text-5xl font-bold font-display leading-tight">
@@ -17,7 +17,7 @@ const Hero = () => {
             express my innovative creative skills for self and company growth. I
             always like to learn new things and have experience with new stuff.
           </p>
-          <a href="">
+          <a href="blah">
             <button className="btn btn-primary font-sans">
               <DocumentArrowDownIcon className="w-5 mr-1"></DocumentArrowDownIcon>{" "}
               Resume
