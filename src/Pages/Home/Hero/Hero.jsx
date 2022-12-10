@@ -1,7 +1,6 @@
 import React from "react";
 import image from "../../../assets/Developer activity.svg";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
