@@ -17,7 +17,7 @@ const Hero = () => {
             express my innovative creative skills for self and company growth. I
             always like to learn new things and have experience with new stuff.
           </p>
-          <a href="blah">
+          <a href="Nahid Ibn Ali.pdf" download>
             <button className="btn btn-primary font-sans">
               <DocumentArrowDownIcon className="w-5 mr-1"></DocumentArrowDownIcon>{" "}
               Resume

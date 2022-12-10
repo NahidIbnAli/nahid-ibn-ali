@@ -1,7 +1,6 @@
 import React from "react";
 import portrait from "../../../assets/dp.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-regular-svg-icons";
 import { faCircleDot } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
@@ -26,8 +25,8 @@ const About = () => {
   ];
 
   return (
-    <div className="hero bg-base-200 py-10">
-      <div className="hero-content flex-col lg:flex-row gap-14">
+    <div className="hero bg-base-200 py-10 px-2">
+      <div className="hero-content flex-col lg:flex-row gap-9 lg:gap-14">
         <img src={portrait} className="max-w-sm rounded-lg" />
         <div className="lg:w-1/2">
           <h1 className="text-5xl font-semibold font-display">About Me</h1>
