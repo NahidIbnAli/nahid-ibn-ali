@@ -67,22 +67,19 @@ const Projects = () => {
               <figure className="px-7 pt-7">
                 <img src={project.image} alt="" className="rounded-xl" />
               </figure>
-              <div className="card-body items-center">
+              <div className="card-body items-start">
                 <h2 className="card-title font-semibold">{project.name}</h2>
-                <div>
-                  {project.description}
-                  <ul className="flex flex-wrap gap-3 my-4">
-                    {project.technologies.map((technology, index) => (
-                      <li
-                        key={index}
-                        className="border border-primary rounded-md px-2"
-                      >
-                        {technology}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+                <p>{project.description}</p>
+                <ul className="flex flex-wrap gap-3 my-4">
+                  {project.technologies.map((technology, index) => (
+                    <li
+                      key={index}
+                      className="border border-primary rounded-md px-2"
+                    >
+                      {technology}
+                    </li>
+                  ))}
+                </ul>
                 <div className="card-actions">
                   <a
                     href={project.liveSite}
