@@ -30,9 +30,9 @@ const Header = () => {
   );
 
   return (
-    <div className="container mx-auto navbar bg-base-100">
+    <div className="container mx-auto navbar bg-base-100 font-sans">
       <div className="navbar-start">
-        <Link to="/">
+        <Link to="/" className="flex items-center">
           <img className="w-14" src={logo} alt="" />
         </Link>
       </div>
@@ -48,7 +48,7 @@ const Header = () => {
             {menuItems}
           </ul>
         </div>
-        <ul className="menu menu-horizontal p-0 hidden lg:flex items-center">
+        <ul className="menu menu-horizontal hidden lg:flex items-center font-serif">
           {menuItems}
         </ul>
       </div>
