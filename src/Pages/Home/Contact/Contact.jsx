@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
-  const handleSendMessage = (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
-    console.log(name, email, message);
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_fyy6k1q",
+        "template_psupoek",
+        form.current,
+        "PZj4QnbeyxZPIvyaI"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          toast.success("Your message has been sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -21,7 +37,8 @@ const Contact = () => {
             to you!
           </p>
           <form
-            onSubmit={handleSendMessage}
+            ref={form}
+            onSubmit={sendEmail}
             className="card-body font-sans gap-5"
           >
             <div className="form-control">
