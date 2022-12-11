@@ -2,14 +2,16 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
     {
       name: "eBay Cars - Used car buying and selling",
       image: "https://i.ibb.co/HV6xP62/e-Bay-Cars.png",
+      link: "ebay-cars",
       description:
-        "A full-stack single-page used car buying and selling web app where people can buy and sell their car. Login system with firebase and private routes. Dashboard for users and admins where admins can do CRUD operations and users can book car and monitor their booking list.",
+        "A full-stack single-page used car buying and selling web app where people can buy and sell their car.",
       technologies: [
         "React.js",
         "Tailwind CSS",
@@ -25,8 +27,9 @@ const Projects = () => {
     {
       name: "Get Snappy - Photography Services",
       image: "https://i.ibb.co/h7gJvsh/Get-snappy.png",
+      link: "get-snappy",
       description:
-        " A full-stack single-page photography service review web app. Login system with firebase and private routes. Users can give review and see their review records on the review page.",
+        " A full-stack single-page photography service review web app where user can give review and monitor their review.",
       technologies: [
         "React.js",
         "React Bootstrap",
@@ -40,9 +43,10 @@ const Projects = () => {
     },
     {
       name: "Coding Ninja - Ed-Tech",
+      link: "coding-ninja",
       image: "https://i.ibb.co/vZwwJS3/Coding-Ninja.png",
       description:
-        "A full-stack single-page Ed-Tech web app where users can get premium access. Login system with firebase and private routes.",
+        "A full-stack single-page Ed-Tech web app where users can buy premium access and more.",
       technologies: [
         "React.js",
         "React Bootstrap",
@@ -63,11 +67,14 @@ const Projects = () => {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
-            <div key={index} className="card bg-base-100 shadow-xl font-sans">
-              <figure className="px-7 pt-7">
+            <div
+              key={index}
+              className="card dark:border border-gray-700 bg-base-100 shadow-lg font-sans"
+            >
+              <figure className="px-6 pt-6">
                 <img src={project.image} alt="" className="rounded-xl" />
               </figure>
-              <div className="card-body items-start">
+              <div className="card-body items-start p-6">
                 <h2 className="card-title font-semibold">{project.name}</h2>
                 <p>{project.description}</p>
                 <ul className="flex flex-wrap gap-3 my-4">
@@ -84,6 +91,7 @@ const Projects = () => {
                   <a
                     href={project.liveSite}
                     target="_blank"
+                    rel="noreferrer"
                     className="btn btn-primary font-display"
                   >
                     <FontAwesomeIcon
@@ -95,6 +103,7 @@ const Projects = () => {
                   <a
                     href={project.frontEndLink}
                     target="_blank"
+                    rel="noreferrer"
                     className="btn btn-primary font-display"
                   >
                     <FontAwesomeIcon
@@ -103,6 +112,12 @@ const Projects = () => {
                     ></FontAwesomeIcon>{" "}
                     Github
                   </a>
+                  <Link
+                    to={`/projects/${project.link}`}
+                    className="btn btn-primary"
+                  >
+                    Details
+                  </Link>
                 </div>
               </div>
             </div>

@@ -30,27 +30,29 @@ const Header = () => {
   );
 
   return (
-    <div className="container mx-auto navbar bg-base-100 font-sans">
-      <div className="navbar-start">
-        <Link to="/" className="flex items-center">
-          <img className="w-14" src={logo} alt="" />
-        </Link>
-      </div>
-      <div className="navbar-end w-4/5">
-        <div className="dropdown dropdown-left">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <Bars3BottomRightIcon className="text-ghost w-7"></Bars3BottomRightIcon>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
-          >
+    <div className="bg-base-100 border-b dark:border-b-gray-700 dark:bg-gray-900 sticky top-0 z-50">
+      <div className="container mx-auto navbar font-sans">
+        <div className="navbar-start">
+          <Link to="/" className="flex items-center">
+            <img className="w-14" src={logo} alt="" />
+          </Link>
+        </div>
+        <div className="navbar-end w-4/5">
+          <div className="dropdown dropdown-left">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <Bars3BottomRightIcon className="text-ghost w-7"></Bars3BottomRightIcon>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              {menuItems}
+            </ul>
+          </div>
+          <ul className="menu menu-horizontal hidden lg:flex items-center font-serif">
             {menuItems}
           </ul>
         </div>
-        <ul className="menu menu-horizontal hidden lg:flex items-center font-serif">
-          {menuItems}
-        </ul>
       </div>
     </div>
   );

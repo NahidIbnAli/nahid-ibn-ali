@@ -5,10 +5,12 @@ import {
   faFacebookF,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import ScrollToTop from "react-scroll-to-top";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-base-100 text-base-content font-sans text-base gap-3">
+    <footer className="footer footer-center p-10 dark:bg-gray-900 text-base-content font-sans text-base gap-3 dark:border-t border-gray-700">
       <div>
         <div className="grid grid-flow-col gap-4">
           <a
@@ -38,6 +40,7 @@ const Footer = () => {
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>
+      <ScrollToTop smooth top="1000" className="scrollStyle" color="#6419E6" />
     </footer>
   );
 };

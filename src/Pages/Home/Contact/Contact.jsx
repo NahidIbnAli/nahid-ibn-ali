@@ -29,13 +29,13 @@ const Contact = () => {
   return (
     <div className="hero py-10 bg-base-200">
       <div className="flex flex-col items-center p-7">
-        <h2 className="text-4xl font-display font-bold pb-7">Get In Touch</h2>
+        <h2 className="text-4xl font-display font-bold">Get In Touch</h2>
+        <p className="mt-3 mb-5 lg:w-3/5 text-center">
+          I'd Love to hear from you. Whether you have a question or just want to
+          say Hi, feel free to drop a message. I'll try my best to get back to
+          you!
+        </p>
         <div className="card flex-shrink-0 w-full max-w-screen-md shadow-2xl bg-base-100">
-          <p className="p-8 pb-0">
-            I'd Love to hear from you. Whether you have a question or just want
-            to say Hi, feel free to drop a message. I'll try my best to get back
-            to you!
-          </p>
           <form
             ref={form}
             onSubmit={sendEmail}
