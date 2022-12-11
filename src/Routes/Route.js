@@ -32,7 +32,9 @@ export const routes = createBrowserRouter([
         path: "/projects/:link",
         element: <ProjectDetails></ProjectDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/projects/${params.link}`),
+          fetch(
+            `https://nahid-ibn-ali-server.vercel.app/projects/${params.link}`
+          ),
       },
       {
         path: "/blog",
