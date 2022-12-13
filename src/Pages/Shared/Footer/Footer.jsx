@@ -10,7 +10,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 dark:bg-gray-900 text-base-content font-sans text-base gap-3 dark:border-t border-gray-700">
+    <footer className="footer footer-center py-24 px-6 dark:bg-gray-900 text-base-content font-sans text-base gap-3 dark:border-t border-gray-700">
       <div>
         <div className="grid grid-flow-col gap-4">
           <a

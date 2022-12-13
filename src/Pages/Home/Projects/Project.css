@@ -1,0 +1,14 @@
+.card figure {
+  width: 100%;
+  height: 200px;
+}
+.card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: 2.5s ease-in-out;
+}
+.card figure:hover img {
+  object-position: bottom;
+}

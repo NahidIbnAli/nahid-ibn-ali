@@ -5,19 +5,17 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-base-100 bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')] -mt-16">
+    <div className="hero min-h-screen bg-base-100 bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')]">
       <div className="bg-[url('/public/pattern.png')] px-6 w-full h-full">
-        <div className="container xl:w-2/3 flex items-center justify-center mx-auto min-h-screen flex-col lg:flex-row-reverse gap-5 lg:gap-20">
-          <img
-            src={image}
-            className="w-4/5 md:w-3/4 lg:w-1/2 xl:w-2/5"
-            alt=""
-          />
+        <div className="container xl:w-2/3 flex items-center justify-center mx-auto min-h-screen flex-col lg:flex-row-reverse gap-5 lg:gap-20 py-10">
+          <div className="w-4/5 md:w-3/4 lg:w-1/2 xl:w-2/5">
+            <img src={image} className="w-full" alt="" />
+          </div>
           <div className="lg:w-1/2">
-            <h1 className="text-5xl font-bold font-display leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold font-display leading-tight">
               Hi, I'm <br></br> Nahid Ibn Ali
             </h1>
-            <div className="text-3xl text-primary dark:text-sky-400 font-semibold font-display py-3">
+            <h3 className="text-2xl lg:text-3xl text-primary dark:text-sky-400 font-semibold font-display py-3">
               <Typewriter
                 options={{
                   strings: [
@@ -31,7 +29,7 @@ const Hero = () => {
                   loop: true,
                 }}
               />
-            </div>
+            </h3>
 
             <p className="mb-6">
               A self-motivated and enthusiastic web developer. To gain

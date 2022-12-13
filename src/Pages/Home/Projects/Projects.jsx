@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import "./Project.css";
 
 const Projects = () => {
   const projects = [
     {
       name: "eBay Cars - Used car buying and selling",
-      image: "https://i.ibb.co/HV6xP62/e-Bay-Cars.png",
+      image: "https://i.ibb.co/k9zn440/e-Bay-Cars.png",
       link: "ebay-cars",
       description:
         "A full-stack single-page used car buying and selling web app where people can buy and sell their car.",
@@ -26,7 +27,7 @@ const Projects = () => {
     },
     {
       name: "Get Snappy - Photography Services",
-      image: "https://i.ibb.co/h7gJvsh/Get-snappy.png",
+      image: "https://i.ibb.co/mFq0qxJ/get-snappy.png",
       link: "get-snappy",
       description:
         " A full-stack single-page photography service review web app where user can give review and monitor their review.",
@@ -44,7 +45,7 @@ const Projects = () => {
     {
       name: "Coding Ninja - Ed-Tech",
       link: "coding-ninja",
-      image: "https://i.ibb.co/vZwwJS3/Coding-Ninja.png",
+      image: "https://i.ibb.co/q722SqQ/Coding-Ninja.png",
       description:
         "A full-stack single-page Ed-Tech web app where users can buy premium access and more.",
       technologies: [
@@ -69,13 +70,15 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="card dark:border border-gray-700 bg-base-100 shadow-lg font-sans"
+              className="card dark:border border-gray-700 bg-base-100 shadow-lg font-sans p-6"
             >
-              <figure className="px-6 pt-6">
+              <figure className="h-48">
                 <img src={project.image} alt="" className="rounded-xl" />
               </figure>
-              <div className="card-body items-start p-6">
-                <h2 className="card-title font-semibold">{project.name}</h2>
+              <div className="card-body items-start p-0">
+                <h2 className="card-title font-semibold pt-5">
+                  {project.name}
+                </h2>
                 <p>{project.description}</p>
                 <ul className="flex flex-wrap gap-3 my-4">
                   {project.technologies.map((technology, index) => (

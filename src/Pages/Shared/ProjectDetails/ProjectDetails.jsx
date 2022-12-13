@@ -28,6 +28,7 @@ const ProjectDetails = () => {
           <div className="lg:w-1/2">
             <h2 className="text-3xl font-semibold mb-3">{name}</h2>
             <p className="mb-4">{description}</p>
+            <h3 className="text-xl font-medium text-slate-300">Features</h3>
             <ul className="mb-4">
               {features.map((feature, index) => (
                 <li key={index}>
@@ -40,6 +41,9 @@ const ProjectDetails = () => {
                 </li>
               ))}
             </ul>
+            <h3 className="text-xl font-medium text-slate-300">
+              Technology used
+            </h3>
             <ul className="mb-5">
               {technologies.map((technology, index) => (
                 <li key={index}>
