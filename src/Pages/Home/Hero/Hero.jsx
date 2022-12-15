@@ -2,12 +2,13 @@ import React from "react";
 import image from "../../../assets/Developer activity.svg";
 import { DocumentArrowDownIcon } from "@heroicons/react/24/solid";
 import Typewriter from "typewriter-effect";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section className="hero h-full bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')]">
+    <section className="hero bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')]">
       <div className="bg-[url('/public/pattern.png')] px-6 w-full h-full">
-        <div className="container xl:w-2/3 flex items-center justify-center mx-auto min-h-screen flex-col lg:flex-row-reverse gap-5 lg:gap-20 py-10">
+        <div className="heroSectionHeight container xl:w-2/3 flex items-center justify-center mx-auto flex-col lg:flex-row-reverse gap-5 lg:gap-20 py-10">
           <div
             data-aos="fade-left"
             data-aos-duration="1500"
