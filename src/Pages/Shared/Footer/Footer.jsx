@@ -6,7 +6,7 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "react-scroll-to-top";
-import "./Footer.css";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -40,7 +40,15 @@ const Footer = () => {
         </p>
         <p>Copyright © 2022 - All right reserved</p>
       </div>
-      <ScrollToTop smooth top="1000" className="scrollStyle" color="#6419E6" />
+      <ScrollToTop
+        smooth
+        top="100"
+        component={
+          <FontAwesomeIcon icon={faAngleUp} color="#6419E6"></FontAwesomeIcon>
+        }
+        style={{ borderRadius: "50%", backgroundColor: "#2A303C" }}
+        color="#6419E6"
+      />
     </footer>
   );
 };

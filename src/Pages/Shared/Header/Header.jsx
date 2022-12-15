@@ -35,7 +35,7 @@ const Header = () => {
   );
 
   return (
-    <div className="bg-base-100 border-b dark:border-b-gray-700 dark:bg-gray-900 sticky top-0 z-50">
+    <nav className="sticky top-0 z-40 border-b dark:border-slate-700 backdrop-blur-2xl transition-colors duration-500 dark:bg-[#0B1120]/80">
       <div className="container mx-auto navbar font-sans">
         <div className="navbar-start">
           <Link to="/" className="flex items-center">
@@ -59,7 +59,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

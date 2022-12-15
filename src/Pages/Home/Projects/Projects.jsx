@@ -61,12 +61,12 @@ const Projects = () => {
   ];
 
   return (
-    <div className="hero bg-base-100 py-10 px-2">
+    <section id="projects" className="hero bg-base-100 py-10 px-2">
       <div className="hero-content block">
         <h2 className="text-4xl font-display font-semibold text-center pb-10">
           Some of My Projects
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -127,7 +127,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

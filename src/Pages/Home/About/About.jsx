@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <div className="hero bg-base-200 py-10 px-2">
+    <section id="about" className="hero bg-base-200 py-10 px-2">
       <div className="hero-content flex-col lg:flex-row gap-9 lg:gap-14">
         <img src={portrait} className="max-w-sm rounded-lg w-full" alt="" />
         <div className="lg:w-1/2">
@@ -86,7 +86,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
