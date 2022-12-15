@@ -25,7 +25,11 @@ const ProjectDetails = () => {
     <div className="bg-base-100 min-h-screen py-10 px-6 font-sans">
       <div className="container mx-auto">
         <div className="flex items-center gap-20 flex-col lg:flex-row">
-          <div className="lg:w-1/2">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            className="lg:w-1/2"
+          >
             <h2 className="text-3xl font-semibold mb-3">{name}</h2>
             <p className="mb-4">{description}</p>
             <h3 className="text-xl font-medium text-slate-300">Features</h3>
@@ -95,7 +99,7 @@ const ProjectDetails = () => {
               </a>
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div data-aos="fade-up" data-aos-duration="1500" className="lg:w-1/2">
             <div className="flex flex-col">
               <div>
                 <img src={coverImage} alt="" className="rounded-lg" />

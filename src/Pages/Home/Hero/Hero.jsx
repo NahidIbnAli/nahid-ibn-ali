@@ -5,16 +5,21 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <section
-      id="/"
-      className="hero h-full bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')]"
-    >
+    <section className="hero h-full bg-[url('/public/hero@75.b2469a49.jpg')] dark:bg-[url('/public/hero-dark@90.dba36cdf.jpg')]">
       <div className="bg-[url('/public/pattern.png')] px-6 w-full h-full">
         <div className="container xl:w-2/3 flex items-center justify-center mx-auto min-h-screen flex-col lg:flex-row-reverse gap-5 lg:gap-20 py-10">
-          <div className="w-4/5 md:w-3/4 lg:w-1/2 xl:w-2/5">
+          <div
+            data-aos="fade-left"
+            data-aos-duration="1500"
+            className="w-4/5 md:w-3/4 lg:w-1/2 xl:w-2/5"
+          >
             <img src={image} className="w-full" alt="" />
           </div>
-          <div className="lg:w-1/2">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            className="lg:w-1/2"
+          >
             <h1 className="text-4xl lg:text-5xl font-display font-bold leading-tight">
               <p>Hi, I'm</p>
               <p className="lg:mt-3">Nahid Ibn Ali</p>
