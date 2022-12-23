@@ -62,11 +62,7 @@ const Projects = () => {
 
   return (
     <section className="hero bg-base-100 py-10 px-2">
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        className="hero-content block"
-      >
+      <div className="hero-content block">
         <h2 className="text-4xl font-display font-semibold text-center pb-10">
           Some of My Projects
         </h2>

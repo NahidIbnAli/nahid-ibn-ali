@@ -54,19 +54,11 @@ const Contact = () => {
   return (
     <section className="py-16 px-6 bg-base-200">
       <div className="container mx-auto">
-        <h2
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          className="text-4xl md:text-5xl font-display font-bold text-center"
-        >
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-center">
           Get In Touch
         </h2>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24 mt-10 font-sans">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1500"
-            className="flex flex-col w-full lg:w-auto gap-5"
-          >
+          <div className="flex flex-col w-full lg:w-auto gap-5">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
@@ -86,11 +78,7 @@ const Contact = () => {
             ))}
           </div>
           <div className="lg:w-1/2">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="1500"
-              className="card dark:border border-slate-700 bg-base-100 p-6 sm:p-10"
-            >
+            <div className="card dark:border border-slate-700 bg-base-100 p-6 sm:p-10">
               <p>
                 I'd Love to hear from you. Whether you have a question or just
                 want to say Hi, feel free to drop a message. I'll try my best to

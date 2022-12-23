@@ -26,11 +26,7 @@ const About = () => {
 
   return (
     <section className="hero bg-base-200 py-10 px-2">
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1500"
-        className="hero-content flex-col lg:flex-row gap-9 lg:gap-14"
-      >
+      <div className="hero-content flex-col lg:flex-row gap-9 lg:gap-14">
         <img src={portrait} className="max-w-sm rounded-lg w-full" alt="" />
         <div className="lg:w-1/2">
           <h1 className="text-5xl font-semibold font-display">About Me</h1>

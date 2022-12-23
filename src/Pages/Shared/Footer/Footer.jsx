@@ -44,9 +44,13 @@ const Footer = () => {
         smooth
         top="100"
         component={
-          <FontAwesomeIcon icon={faAngleUp} color="#6419E6"></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faAngleUp} color="#ffffff"></FontAwesomeIcon>
         }
-        style={{ borderRadius: "50%", backgroundColor: "#2A303C" }}
+        style={{
+          borderRadius: "50%",
+          backgroundColor: "#31394b",
+          boxShadow: "none",
+        }}
         color="#6419E6"
       />
     </footer>
