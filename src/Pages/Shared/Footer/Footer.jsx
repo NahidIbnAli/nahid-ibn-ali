@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import ScrollToTop from "react-scroll-to-top";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import "./Footer.css";
 
 const Footer = () => {
   return (

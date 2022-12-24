@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,8 +7,13 @@ import {
   faLocationDot,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { Fade } from "react-reveal";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -54,76 +59,82 @@ const Contact = () => {
   return (
     <section className="py-16 px-6 bg-base-200">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-center">
-          Get In Touch
-        </h2>
+        <Fade bottom duration={3000} distance="40%">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-center">
+            Get In Touch
+          </h2>
+        </Fade>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24 mt-10 font-sans">
-          <div className="flex flex-col w-full lg:w-auto gap-5">
-            {contactInfo.map((info, index) => (
-              <div
-                key={index}
-                className="card dark:border border-slate-700 bg-base-100 text-center p-6 gap-2"
-              >
-                <p>
-                  <FontAwesomeIcon
-                    icon={info.icon}
-                    className="text-4xl text-primary"
-                  ></FontAwesomeIcon>
-                </p>
-                <h3 className="text-2xl font-medium">{info.name}</h3>
-                <a href={info.url} className="text-lg hover:text-primary">
-                  {info.text}
-                </a>
-              </div>
-            ))}
-          </div>
-          <div className="lg:w-1/2">
-            <div className="card dark:border border-slate-700 bg-base-100 p-6 sm:p-10">
-              <p>
-                I'd Love to hear from you. Whether you have a question or just
-                want to say Hi, feel free to drop a message. I'll try my best to
-                get back to you!
-              </p>
-              <form
-                ref={form}
-                onSubmit={sendEmail}
-                className="card-body font-sans p-0 pt-8 gap-y-6 sm:gap-y-10"
-              >
-                <div className="form-control">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className="input input-bordered"
-                  />
+          <Fade left duration={3000} distance="7%">
+            <div className="flex flex-col w-full lg:w-auto gap-5">
+              {contactInfo.map((info, index) => (
+                <div
+                  key={index}
+                  className="card dark:border border-slate-700 bg-base-100 text-center p-6 gap-2"
+                >
+                  <p>
+                    <FontAwesomeIcon
+                      icon={info.icon}
+                      className="text-4xl text-primary"
+                    ></FontAwesomeIcon>
+                  </p>
+                  <h3 className="text-2xl font-medium">{info.name}</h3>
+                  <a href={info.url} className="text-lg hover:text-primary">
+                    {info.text}
+                  </a>
                 </div>
-                <div className="form-control">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    className="input input-bordered"
-                  />
-                </div>
-                <div className="form-control">
-                  <input
-                    type="text"
-                    name="message"
-                    placeholder="Your Message"
-                    className="input input-bordered"
-                  />
-                </div>
-                <div className="form-control">
-                  <button
-                    type="submit"
-                    className="btn btn-primary font-display"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              ))}
             </div>
-          </div>
+          </Fade>
+          <Fade bottom duration={3000} distance="7%">
+            <div className="lg:w-1/2">
+              <div className="card dark:border border-slate-700 bg-base-100 p-6 sm:p-10">
+                <p>
+                  I'd Love to hear from you. Whether you have a question or just
+                  want to say Hi, feel free to drop a message. I'll try my best
+                  to get back to you!
+                </p>
+                <form
+                  ref={form}
+                  onSubmit={sendEmail}
+                  className="card-body font-sans p-0 pt-8 gap-y-6 sm:gap-y-10"
+                >
+                  <div className="form-control">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <input
+                      type="text"
+                      name="message"
+                      placeholder="Your Message"
+                      className="input input-bordered"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <button
+                      type="submit"
+                      className="btn btn-primary font-display"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </Fade>
         </div>
       </div>
     </section>

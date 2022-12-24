@@ -1,0 +1,6 @@
+.scroll-to-top {
+  transition: all 0.3s linear;
+}
+.scroll-to-top:hover {
+  background-color: #6419e6 !important;
+}

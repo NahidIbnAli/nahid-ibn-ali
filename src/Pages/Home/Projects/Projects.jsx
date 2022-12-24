@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import "./Project.css";
+import { Fade } from "react-reveal";
 
 const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projects = [
     {
       name: "eBay Cars - Used car buying and selling",
@@ -63,69 +68,73 @@ const Projects = () => {
   return (
     <section className="hero bg-base-100 py-10 px-2">
       <div className="hero-content block">
-        <h2 className="text-4xl font-display font-semibold text-center pb-10">
-          Some of My Projects
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="card dark:border border-gray-700 bg-base-100 shadow-lg font-sans p-6"
-            >
-              <figure className="h-48">
-                <img src={project.image} alt="" className="rounded-xl" />
-              </figure>
-              <div className="card-body items-start p-0">
-                <h2 className="card-title font-semibold pt-5">
-                  {project.name}
-                </h2>
-                <p>{project.description}</p>
-                <ul className="flex flex-wrap gap-3 my-4">
-                  {project.technologies.map((technology, index) => (
-                    <li
-                      key={index}
-                      className="border border-primary rounded-md px-2"
+        <Fade bottom duration={3000} distance="40%">
+          <h2 className="text-4xl font-display font-semibold text-center pb-10">
+            Some of My Projects
+          </h2>
+        </Fade>
+        <Fade bottom duration={3000} distance="5%">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="card dark:border border-gray-700 bg-base-100 shadow-lg font-sans p-6"
+              >
+                <figure className="h-48">
+                  <img src={project.image} alt="" className="rounded-xl" />
+                </figure>
+                <div className="card-body items-start p-0">
+                  <h2 className="card-title font-semibold pt-5">
+                    {project.name}
+                  </h2>
+                  <p>{project.description}</p>
+                  <ul className="flex flex-wrap gap-3 my-4">
+                    {project.technologies.map((technology, index) => (
+                      <li
+                        key={index}
+                        className="border border-primary rounded-md px-2"
+                      >
+                        {technology}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="card-actions">
+                    <a
+                      href={project.liveSite}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary font-display"
                     >
-                      {technology}
-                    </li>
-                  ))}
-                </ul>
-                <div className="card-actions">
-                  <a
-                    href={project.liveSite}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary font-display"
-                  >
-                    <FontAwesomeIcon
-                      className="mr-1"
-                      icon={faChartLine}
-                    ></FontAwesomeIcon>{" "}
-                    Live Link
-                  </a>
-                  <a
-                    href={project.frontEndLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary font-display"
-                  >
-                    <FontAwesomeIcon
-                      className="mr-1"
-                      icon={faGithub}
-                    ></FontAwesomeIcon>{" "}
-                    Github
-                  </a>
-                  <Link
-                    to={`/projects/${project.link}`}
-                    className="btn btn-primary"
-                  >
-                    Details
-                  </Link>
+                      <FontAwesomeIcon
+                        className="mr-1"
+                        icon={faChartLine}
+                      ></FontAwesomeIcon>{" "}
+                      Live Link
+                    </a>
+                    <a
+                      href={project.frontEndLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary font-display"
+                    >
+                      <FontAwesomeIcon
+                        className="mr-1"
+                        icon={faGithub}
+                      ></FontAwesomeIcon>{" "}
+                      Github
+                    </a>
+                    <Link
+                      to={`/projects/${project.link}`}
+                      className="btn btn-primary"
+                    >
+                      Details
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Fade>
       </div>
     </section>
   );
